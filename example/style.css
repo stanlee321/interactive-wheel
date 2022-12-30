@@ -1,27 +1,68 @@
+* {
+  box-sizing: border-box;
+}
 
-  .wheel {
-    background-image: url('wheel.png');
-    width: 760px;
-    height: 760px;
-    position: relative;
-    /* background-color: #eee; Add a light grey background color */
-    border: 1px solid #ccc; /* Add a thin border */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a subtle drop shadow */
-    overflow: hidden; /* Hide the icons that are outside the bounds of the wheel */
-  }
-  
-  .icon {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    transform-origin: 50% 50%;
-  }
-  
-  /* Change the appearance of the icon when the mouse hovers over it */
-  .icon:hover {
-    opacity: 0.5;
-  }
+html {
+  user-select: none;
+  overflow: hidden;
+}
+html body {
+  /* background-color: #222; */
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
 
-  
-  
-  
+
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.container {
+  position: relative;
+}
+
+.wheel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.wheel img {
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:  translate(-50%, -50%);
+}
+
+.images {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.images li {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: rotate(5deg) translate(-50%, -50%);
+}
+
+.images li img {
+  width: 50px;
+  height: 50px;
+  transform: translate(125px, 0);
+}

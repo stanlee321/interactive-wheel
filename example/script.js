@@ -1,24 +1,45 @@
-var icons = document.querySelectorAll('.icon');
+const wheel = document.querySelector('.wheel img');
+const images = document.querySelectorAll('.images li img');
+
+const angle = 360 / (images.length);
+
+const radius = ( wheel.offsetWidth / 2) - 60; // radius of the circle in pixels
 
 
-icons.forEach(function(icon, index) {
-	// Set the initial position and rotation of the icon based on its index
-	icon.style.top = '250px';
-	icon.style.left = '250px';
-	icon.style.transform = 'rotate(' + (360 / icons.length * index) + 'deg)';
+function positionImages() {
+  images.forEach((image, index) => {
+    const radians = (angle *index * Math.PI) / 180;
+    const x = radius * Math.cos(radians);
+    const y = radius * Math.sin(radians);
+    image.style.transform = `translate(${x}px, ${y}px)`;
+    console.log(x,y)
+  });  
+}
+
+positionImages()
+
+images.forEach(image => {
+  image.addEventListener('mouseenter', () => {
+    image.classList.add('rotate');
   });
+  image.addEventListener('mouseleave', () => {
+    image.classList.remove('rotate');
+  });
+});
 
-icons.forEach(function(icon) {
+
+
+images.forEach(function(image) {
   // Change the appearance of the icon when the mouse hovers over it
-  icon.addEventListener('mouseover', function() {
+  image.addEventListener('mouseover', function() {
     icon.style.opacity = '0.5';
   });
-  icon.addEventListener('mouseout', function() {
-    icon.style.opacity = '1';
+  image.addEventListener('mouseout', function() {
+    image.style.opacity = '1';
   });
 
   // Display more information about the SDG when the icon is clicked
-  icon.addEventListener('click', function() {
-    alert('More information about ' + icon.alt);
+  image.addEventListener('click', function() {
+    alert('More information about ' + image.alt);
   });
 });
