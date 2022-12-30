@@ -1,0 +1,27 @@
+
+  .wheel {
+    background-image: url('wheel.png');
+    width: 760px;
+    height: 760px;
+    position: relative;
+    /* background-color: #eee; Add a light grey background color */
+    border: 1px solid #ccc; /* Add a thin border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a subtle drop shadow */
+    overflow: hidden; /* Hide the icons that are outside the bounds of the wheel */
+  }
+  
+  .icon {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    transform-origin: 50% 50%;
+  }
+  
+  /* Change the appearance of the icon when the mouse hovers over it */
+  .icon:hover {
+    opacity: 0.5;
+  }
+
+  
+  
+  

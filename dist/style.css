@@ -31,8 +31,8 @@ h1 {
   position: absolute;
   top: var(--y);
   left: var(--x);
-  width: 500px;
-  height: 500px;
+  width: 900px;
+  height: 900px;
   transform: translate(-50%, -50%);
   transform-origin: 0% 0%;
 }
@@ -63,6 +63,8 @@ h1 {
   font-size: 2rem;
   color: white;
 }
+
+
 .wheel[data-chosen='1'] .arc:nth-child(1) {
   opacity: 1;
   transform: scale(1.1) rotate(var(--rotation)) !important;
@@ -72,7 +74,7 @@ h1 {
   color: rgba(0, 0, 0, 0.5);
 }
 .wheel .arc:nth-child(1) {
-  --rotation: -22.5deg;
+  --rotation: -21.17deg;
   --color: hsl(0deg, 36%, 60%);
   --color-border: hsl(0deg, 36%, 40%);
   transform: scale(0) rotate(var(--rotation));
@@ -83,6 +85,12 @@ h1 {
   color: rgba(255, 255, 255, 0.8);
   transition: color 0.3s;
 }
+
+
+
+
+
+
 .wheel[data-chosen='2'] .arc:nth-child(2) {
   opacity: 1;
   transform: scale(1.1) rotate(var(--rotation)) !important;
@@ -92,7 +100,7 @@ h1 {
   color: rgba(0, 0, 0, 0.5);
 }
 .wheel .arc:nth-child(2) {
-  --rotation: 22.5deg;
+  --rotation: 21.17deg;
   --color: hsl(45deg, 36%, 60%);
   --color-border: hsl(45deg, 36%, 40%);
   transform: scale(0) rotate(var(--rotation));
@@ -103,6 +111,10 @@ h1 {
   color: rgba(255, 255, 255, 0.8);
   transition: color 0.3s;
 }
+
+
+
+
 .wheel[data-chosen='3'] .arc:nth-child(3) {
   opacity: 1;
   transform: scale(1.1) rotate(var(--rotation)) !important;
@@ -112,7 +124,7 @@ h1 {
   color: rgba(0, 0, 0, 0.5);
 }
 .wheel .arc:nth-child(3) {
-  --rotation: 67.5deg;
+  --rotation: 65.35deg;
   --color: hsl(90deg, 36%, 60%);
   --color-border: hsl(90deg, 36%, 40%);
   transform: scale(0) rotate(var(--rotation));
@@ -123,6 +135,9 @@ h1 {
   color: rgba(255, 255, 255, 0.8);
   transition: color 0.3s;
 }
+
+
+
 .wheel[data-chosen='4'] .arc:nth-child(4) {
   opacity: 1;
   transform: scale(1.1) rotate(var(--rotation)) !important;
@@ -132,7 +147,7 @@ h1 {
   color: rgba(0, 0, 0, 0.5);
 }
 .wheel .arc:nth-child(4) {
-  --rotation: 112.5deg;
+  --rotation: 103.52deg;
   --color: hsl(135deg, 36%, 60%);
   --color-border: hsl(135deg, 36%, 40%);
   transform: scale(0) rotate(var(--rotation));
@@ -143,6 +158,9 @@ h1 {
   color: rgba(255, 255, 255, 0.8);
   transition: color 0.3s;
 }
+
+
+
 .wheel[data-chosen='5'] .arc:nth-child(5) {
   opacity: 1;
   transform: scale(1.1) rotate(var(--rotation)) !important;
@@ -152,7 +170,7 @@ h1 {
   color: rgba(0, 0, 0, 0.5);
 }
 .wheel .arc:nth-child(5) {
-  --rotation: 157.5deg;
+  --rotation: 124.69deg;
   --color: hsl(180deg, 36%, 60%);
   --color-border: hsl(180deg, 36%, 40%);
   transform: scale(0) rotate(var(--rotation));
@@ -163,6 +181,8 @@ h1 {
   color: rgba(255, 255, 255, 0.8);
   transition: color 0.3s;
 }
+
+
 .wheel[data-chosen='6'] .arc:nth-child(6) {
   opacity: 1;
   transform: scale(1.1) rotate(var(--rotation)) !important;
@@ -172,7 +192,7 @@ h1 {
   color: rgba(0, 0, 0, 0.5);
 }
 .wheel .arc:nth-child(6) {
-  --rotation: 202.5deg;
+  --rotation: 160.86deg;
   --color: hsl(225deg, 36%, 60%);
   --color-border: hsl(225deg, 36%, 40%);
   transform: scale(0) rotate(var(--rotation));
@@ -183,6 +203,7 @@ h1 {
   color: rgba(255, 255, 255, 0.8);
   transition: color 0.3s;
 }
+
 .wheel[data-chosen='7'] .arc:nth-child(7) {
   opacity: 1;
   transform: scale(1.1) rotate(var(--rotation)) !important;
@@ -192,7 +213,7 @@ h1 {
   color: rgba(0, 0, 0, 0.5);
 }
 .wheel .arc:nth-child(7) {
-  --rotation: 247.5deg;
+  --rotation: 180.03deg;
   --color: hsl(270deg, 36%, 60%);
   --color-border: hsl(270deg, 36%, 40%);
   transform: scale(0) rotate(var(--rotation));
@@ -203,6 +224,8 @@ h1 {
   color: rgba(255, 255, 255, 0.8);
   transition: color 0.3s;
 }
+
+
 .wheel[data-chosen='8'] .arc:nth-child(8) {
   opacity: 1;
   transform: scale(1.1) rotate(var(--rotation)) !important;
@@ -212,13 +235,215 @@ h1 {
   color: rgba(0, 0, 0, 0.5);
 }
 .wheel .arc:nth-child(8) {
-  --rotation: 292.5deg;
+  --rotation: 200.2deg;
   --color: hsl(315deg, 36%, 60%);
   --color-border: hsl(315deg, 36%, 40%);
   transform: scale(0) rotate(var(--rotation));
   transition-delay: 0s;
 }
 .wheel .arc:nth-child(8) i {
+  transform: rotate(calc(var(--rotation) * -1));
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.3s;
+}
+
+
+.wheel[data-chosen='9'] .arc:nth-child(9) {
+  opacity: 1;
+  transform: scale(1.1) rotate(var(--rotation)) !important;
+  filter: brightness(150%);
+}
+.wheel[data-chosen='9'] .arc:nth-child(9) i {
+  color: rgba(0, 0, 0, 0.5);
+}
+.wheel .arc:nth-child(9) {
+  --rotation: 220.37deg;
+  --color: hsl(315deg, 36%, 60%);
+  --color-border: hsl(315deg, 36%, 40%);
+  transform: scale(0) rotate(var(--rotation));
+  transition-delay: 0s;
+}
+.wheel .arc:nth-child(9) i {
+  transform: rotate(calc(var(--rotation) * -1));
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.3s;
+}
+
+
+.wheel[data-chosen='10'] .arc:nth-child(10) {
+  opacity: 1;
+  transform: scale(1.1) rotate(var(--rotation)) !important;
+  filter: brightness(150%);
+}
+.wheel[data-chosen='10'] .arc:nth-child(10) i {
+  color: rgba(0, 0, 0, 0.5);
+}
+.wheel .arc:nth-child(10) {
+  --rotation: 240.37deg;
+  --color: hsl(315deg, 36%, 60%);
+  --color-border: hsl(315deg, 36%, 40%);
+  transform: scale(0) rotate(var(--rotation));
+  transition-delay: 0s;
+}
+.wheel .arc:nth-child(10) i {
+  transform: rotate(calc(var(--rotation) * -1));
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.3s;
+}
+
+
+
+
+.wheel[data-chosen='11'] .arc:nth-child(11) {
+  opacity: 1;
+  transform: scale(1.1) rotate(var(--rotation)) !important;
+  filter: brightness(150%);
+}
+.wheel[data-chosen='11'] .arc:nth-child(11) i {
+  color: rgba(0, 0, 0, 0.5);
+}
+.wheel .arc:nth-child(11) {
+  --rotation: 190.54deg;
+  --color: hsl(315deg, 36%, 60%);
+  --color-border: hsl(315deg, 36%, 40%);
+  transform: scale(0) rotate(var(--rotation));
+  transition-delay: 0s;
+}
+.wheel .arc:nth-child(11) i {
+  transform: rotate(calc(var(--rotation) * -1));
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.3s;
+}
+
+
+.wheel[data-chosen='12'] .arc:nth-child(12) {
+  opacity: 1;
+  transform: scale(1.1) rotate(var(--rotation)) !important;
+  filter: brightness(150%);
+}
+.wheel[data-chosen='12'] .arc:nth-child(12) i {
+  color: rgba(0, 0, 0, 0.5);
+}
+.wheel .arc:nth-child(12) {
+  --rotation: 211.71deg;
+  --color: hsl(315deg, 36%, 60%);
+  --color-border: hsl(315deg, 36%, 40%);
+  transform: scale(0) rotate(var(--rotation));
+  transition-delay: 0s;
+}
+.wheel .arc:nth-child(12) i {
+  transform: rotate(calc(var(--rotation) * -1));
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.3s;
+}
+
+
+.wheel[data-chosen='13'] .arc:nth-child(13) {
+  opacity: 1;
+  transform: scale(1.1) rotate(var(--rotation)) !important;
+  filter: brightness(150%);
+}
+.wheel[data-chosen='13'] .arc:nth-child(13) i {
+  color: rgba(0, 0, 0, 0.5);
+}
+.wheel .arc:nth-child(13) {
+  --rotation: 232.88deg;
+  --color: hsl(315deg, 36%, 60%);
+  --color-border: hsl(315deg, 36%, 40%);
+  transform: scale(0) rotate(var(--rotation));
+  transition-delay: 0s;
+}
+.wheel .arc:nth-child(13) i {
+  transform: rotate(calc(var(--rotation) * -1));
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.3s;
+}
+
+
+.wheel[data-chosen='14'] .arc:nth-child(14) {
+  opacity: 1;
+  transform: scale(1.1) rotate(var(--rotation)) !important;
+  filter: brightness(150%);
+}
+.wheel[data-chosen='14'] .arc:nth-child(14) i {
+  color: rgba(0, 0, 0, 0.5);
+}
+.wheel .arc:nth-child(14) {
+  --rotation: 254.05deg;
+  --color: hsl(315deg, 36%, 60%);
+  --color-border: hsl(315deg, 36%, 40%);
+  transform: scale(0) rotate(var(--rotation));
+  transition-delay: 0s;
+}
+.wheel .arc:nth-child(14) i {
+  transform: rotate(calc(var(--rotation) * -1));
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.3s;
+}
+
+
+
+.wheel[data-chosen='15'] .arc:nth-child(15) {
+  opacity: 1;
+  transform: scale(1.1) rotate(var(--rotation)) !important;
+  filter: brightness(150%);
+}
+.wheel[data-chosen='15'] .arc:nth-child(15) i {
+  color: rgba(0, 0, 0, 0.5);
+}
+.wheel .arc:nth-child(15) {
+  --rotation: 275.2deg;
+  --color: hsl(315deg, 36%, 60%);
+  --color-border: hsl(315deg, 36%, 40%);
+  transform: scale(0) rotate(var(--rotation));
+  transition-delay: 0s;
+}
+.wheel .arc:nth-child(15) i {
+  transform: rotate(calc(var(--rotation) * -1));
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.3s;
+}
+
+
+
+.wheel[data-chosen='16'] .arc:nth-child(16) {
+  opacity: 1;
+  transform: scale(1.1) rotate(var(--rotation)) !important;
+  filter: brightness(150%);
+}
+.wheel[data-chosen='16'] .arc:nth-child(16) i {
+  color: rgba(0, 0, 0, 0.5);
+}
+.wheel .arc:nth-child(16) {
+  --rotation: 296.39deg;
+  --color: hsl(315deg, 36%, 60%);
+  --color-border: hsl(315deg, 36%, 40%);
+  transform: scale(0) rotate(var(--rotation));
+  transition-delay: 0s;
+}
+.wheel .arc:nth-child(16) i {
+  transform: rotate(calc(var(--rotation) * -1));
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.3s;
+}
+
+
+.wheel[data-chosen='17'] .arc:nth-child(17) {
+  opacity: 1;
+  transform: scale(1.1) rotate(var(--rotation)) !important;
+  filter: brightness(150%);
+}
+.wheel[data-chosen='17'] .arc:nth-child(17) i {
+  color: rgba(0, 0, 0, 0.5);
+}
+.wheel .arc:nth-child(17) {
+  --rotation: 317.59deg;
+  --color: hsl(315deg, 36%, 60%);
+  --color-border: hsl(315deg, 36%, 40%);
+  transform: scale(0) rotate(var(--rotation));
+  transition-delay: 0s;
+}
+.wheel .arc:nth-child(17) i {
   transform: rotate(calc(var(--rotation) * -1));
   color: rgba(255, 255, 255, 0.8);
   transition: color 0.3s;
